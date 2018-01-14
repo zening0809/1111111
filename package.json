@@ -1,0 +1,69 @@
+{
+  "name": "jiepangxie",
+  "version": "1.2.11",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "cross-env": "^5.0.5",
+    "egg": "^1.8.0",
+    "egg-mongoose": "^2.1.1",
+    "egg-oss": "^1.1.0",
+    "egg-redis": "^1.0.2",
+    "egg-scripts": "^1.2.0",
+    "egg-session-redis": "^1.0.0",
+    "egg-socket.io": "^2.1.0",
+    "egg-validate": "^1.0.0",
+    "moment": "^2.19.1",
+    "mongoose-geojson-schema": "^2.1.2",
+    "nuxt": "^1.0.0-rc11",
+    "axios": "^0.16.2",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/egg": "^1.0.2",
+    "@types/egg-mock": "^3.0.1",
+    "@types/less": "0.0.32",
+    "@types/node": "^8.0.28",
+    "@types/socket.io": "^1.4.30",
+    "autod": "^2.9.0",
+    "autod-egg": "^1.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-component": "^0.10.1",
+    "egg-bin": "^4.3.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.12.0",
+    "eslint": "^4.7.0",
+    "eslint-config-egg": "^5.1.0",
+    "eslint-loader": "^1.9.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start",
+    "server": "egg-scripts start --daemon",
+    "stop": "egg-scripts stop",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "build": "nuxt build",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "6, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lijiarui/jiepangxie.git"
+  },
+  "author": "binsee",
+  "license": "MIT"
+}

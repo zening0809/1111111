@@ -1,0 +1,120 @@
+html,body{  
+  width:100%;  
+  height:100%;  
+  margin:0;  
+  padding:0;  
+  overflow-x: hidden;  
+}
+
+.no-min-width {
+  min-width: 0em;
+  margin-right: 0.1em;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-float {
+  float: right;
+}
+
+.color {
+  color: #000000;
+}
+
+.weui-form-preview__hd {
+  line-height: 1.5em;
+}
+
+.weui-btn_mini {
+  padding: 0 0.8em;
+}
+
+.select-after:after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: relative;
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+}
+
+
+.vux-masker-box {
+  position: relative;
+}
+
+.img-box {
+  position: relative;
+  height: 180px;
+  border-radius: 2px;
+  background-color: #fff;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.m-img {
+  padding: 1px;
+  display: block;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 1px;
+}
+
+.placeholder {
+  text-align: center;
+  line-height: 25px;
+}
+
+.weui-grid {
+  width: 50%;
+}
+
+.weui-grid__label {
+  font-size: 16px;
+}
+
+.button-sp-area {
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 60%;
+}
+
+.m-top {
+  margin-top: 0.2em;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #09BB07;
+}
+
+.weui-select {
+  height: 25px;
+  line-height: 25px;
+}
+
+.weui-form-preview__label {
+  text-align-last: auto;
+}
+
+.weui-select {
+  padding-left: 0px;
+}
+
+/* _::-webkit-full-page-media, _:future, :root .actionSheet_wrap {  height: 5000px; background: blue; }
+
+.actionSheet_wrap{
+  min-height: 5000px
+} */

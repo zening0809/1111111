@@ -1,0 +1,10 @@
+.nuxt
+.vscode
+logs
+run
+node_modules
+typings
+memo.md
+package-lock.json
+config/dev_config.js
+config/prod_config.js

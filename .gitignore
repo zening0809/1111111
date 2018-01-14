@@ -1,0 +1,16 @@
+logs/
+npm-debug.log
+node_modules/
+coverage/
+.idea/
+run/
+.DS_Store
+*.swp
+package-lock.json
+example
+typings
+.nuxt
+typings.json
+last.sql
+prod_config.js
+config/dev_config.js
