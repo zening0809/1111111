@@ -9,7 +9,7 @@
 微信bot子项目使用typescript编写，使用wechaty作为微信开发框架。bot子项目与主项目服务间使用websocket协议通讯。
 
 代码版本库使用git，部署采用docker容器。
-测试
+测试22
 ## 使用
 
 ### 本地开发
