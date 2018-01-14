@@ -157,7 +157,7 @@ module.exports = appInfo => {
         },
 
         // 域名
-        host: 'http://zntest.free.ngrok.cc',
+        host: 'http://lywxtest.free.ngrok.cc',
 
         // 行程相关参数配置
         trip: {
@@ -194,8 +194,8 @@ module.exports = appInfo => {
 
         // 微信公众平台参数
         mp_dev: {
-            appid: 'wx2f95fb4c65af4fd0',
-            appsecret: '1d69d80261ddbd48f3723217bebbd506',
+            appid: 'wx894e6adf793412fd',
+            appsecret: '422ac986b4d1ba5112a5854457ecc44f',
         },
 
         // 腾讯地图参数
@@ -206,7 +206,7 @@ module.exports = appInfo => {
 
         // 微信支付参数
         wx_pay: {
-            appid: 'wx2f95fb4c65af4fd0',
+            appid: '',
             mch_id: '',
             sign_key: '',
         },
@@ -219,8 +219,8 @@ module.exports = appInfo => {
             bot10086: {
               enabled: true,
               imgUrl: './site/qr.jpg', // 机器人的二维码图片url        
-              sckey: '', 
-            }
+              sckey: '', // server酱通知调用key
+            },
         },
 
         // 是否使用Server酱通知，false则使用batorange的通知服务
