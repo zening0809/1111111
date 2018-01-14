@@ -121,6 +121,39 @@
           <input @focus="onFocus($event)" :readonly="!isChange" class="weui-input" type="text" placeholder="" v-model="info.car_no">
         </div>
       </div>
+      <!-- 新添加的住址 公司地址 上下班时间 -->
+      <div class="weui-cell">
+        <div class="weui-cell__hd">
+          <label class="weui-label">住址：</label>
+        </div>
+        <div class="weui-cell__bd">
+          <input @focus="onFocus($event)" :readonly="!isChange" class="weui-input" type="text" placeholder="" v-model="info.address">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd">
+          <label class="weui-label">公司地址：</label>
+        </div>
+        <div class="weui-cell__bd">
+          <input @focus="onFocus($event)" :readonly="!isChange" class="weui-input" type="text" placeholder="" v-model="info.company_address">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd">
+          <label class="weui-label">上班时间：</label>
+        </div>
+        <div class="weui-cell__bd">
+          <input @focus="onFocus($event)" :readonly="!isChange" class="weui-input" type="time" placeholder="" v-model="info.office_hours">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd">
+          <label class="weui-label">下班时间：</label>
+        </div>
+        <div class="weui-cell__bd">
+          <input @focus="onFocus($event)" :readonly="!isChange" class="weui-input" type="time" placeholder="" v-model="info.off_hours">
+        </div>
+      </div>
     </div>
     <div class="weui-cells__title">个人简介</div>
     <div class="weui-cells weui-cells_form">
@@ -210,6 +243,8 @@ export default {
       // console.log('当前元素为:')
       // console.log(event.srcElement)
       if (!this.isChange && event.type === "focus") {
+        console.log(event);
+        console.log(event.srcElement);
         // console.log('调用元素的blur方法')
         event.srcElement.blur();
       }
@@ -227,6 +262,10 @@ export default {
         "car_seat",
         "car_color",
         "car_no",
+        "address",
+        "company_address",
+        "office_hours",
+        "off_hours",
         "corp",
         "intro"
       ];
@@ -283,7 +322,7 @@ export default {
         this.isChange = true;
         return;
       }
-
+      
       const router = this.$router;
       axios
         .post("/api/web/setUserInfo", data)
