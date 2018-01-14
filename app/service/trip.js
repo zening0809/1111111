@@ -90,8 +90,8 @@ module.exports = app => {
       const trips = await model.Trip.find(query, null, { limit: 5 })
       logger.debug('\n create() 创建行程前，寻找用户行程结果:\n%s\n', JSON.stringify(trips))
       if (trips && Array.isArray(trips) && trips.length > 0) {
-        logger.warn('\n create() 用户uid "%s" 创建行程前仍有未关闭行程，取消创建行程，使用查询条件：\n%s\n', data.uid, JSON.stringify(query))
-        throw new Error('创建行程失败：存在未关闭的行程！')
+        // logger.warn('\n create() 用户uid "%s" 创建行程前仍有未关闭行程，取消创建行程，使用查询条件：\n%s\n', data.uid, JSON.stringify(query))
+        // throw new Error('创建行程失败：存在未关闭的行程！')
       }
 
       logger.debug('\n create() 准备创建行程')

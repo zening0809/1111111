@@ -361,14 +361,14 @@ module.exports = app => {
 
       logger.debug('\n pubTrip() 创建行程前，提交来的data:\n%s\n', JSON.stringify(data))
       logger.debug('\n pubTrip() 创建行程前，寻找用户行程结果:\n%s\n', JSON.stringify(trips))
-      console.log(111111111111);
-      可以发多个行程
+    //   可以发多个行程
       if (trips && Array.isArray(trips) && trips.length > 0) {
         logger.warn('\n pubTrip() 用户uid "%s" 创建行程前仍有未关闭行程，取消创建行程', uid)
-        return {
-          errCode: 31,
-          msg: '仍有未结束的行程！不能再发布新行程！',
-        }
+        console.log(trips,1111111111);
+        // return {
+        //   errCode: 31,
+        //   msg: '仍有未结束的行程！不能再发布新行程！',
+        // }
       }
 
       // 这里创建操作返回的是boolean值
