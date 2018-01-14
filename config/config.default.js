@@ -200,8 +200,8 @@ module.exports = appInfo => {
 
         // 腾讯地图参数
         mapConf: {
-            key: '',
-            referer: '',
+            key: 'YMTBZ-HGZKS-J2EOE-6VMEA-FYQR2-K2FDE',
+            referer: 'myapp',
         },
 
         // 微信支付参数
