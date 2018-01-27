@@ -65,7 +65,7 @@ module.exports = app => {
     headImgUpdatetime: Date,
     // 公司名称
     corp: String,
-    // 简介
+    // 简介 
     intro: { type: String, default: '' },
     // 标签 用户为自己设定的关键字，比如能提供的服务、从业类型、爱好等
     tag: [String],
@@ -90,8 +90,15 @@ module.exports = app => {
       // // 【虚拟属性】冻结积分（待生效积分）
       // freeze: { type: Number, default: 0 },
     },
+    // 住址
+    address: { type: String, default: '' },
+    // 上班时间
+    office_hours: Date,
+    // 下班时间 
+    off_hours: Date,
     // TODO: 认证部分
     cert: {},
+    
   }, {
     toObject: { virtuals: true },
     timestamps: { createdAt: 'createTime', updatedAt: 'updateTime' },
