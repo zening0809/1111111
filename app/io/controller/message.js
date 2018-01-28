@@ -8,8 +8,7 @@ module.exports = () => {
   return function* () {
     // const rev_event = 'rev_msg'
     // const rev_type = 'rev_bind'
-    const data = this.args[0];
-    let userInfo = yield service.bot.getUserInfo(data);
+    const data = this.args[0]
     // const data = {
     //   key: key,
     //   alias: string,
@@ -34,18 +33,8 @@ module.exports = () => {
       return
     }
 
-    // 检测用户输入了暂停与继续
-    let rule = /^\s*(暂停).*$/i;
-    if (rule.test(data.msg)) {
-        console.log(userInfo)
-        console.log('用户希望暂停提醒')
-    }
-    rule = /^\s*(恢复).*$/i;
-    if (rule.test(data.msg)) {
-        console.log('用户希望恢复提醒')
-    }
     // 保存聊天记录
-    rule = /^\s*(发布|发布行程|人找车|车找人).+$/i
+    let rule = /^\s*(发布|发布行程|人找车|车找人).+$/i
     if (rule.test(data.msg)) {
       const userInfo = yield service.bot.getUserInfo(data)
       const groupInfo = yield service.bot.getGroupInfo(data)
@@ -63,36 +52,34 @@ module.exports = () => {
           })
       }
     }
-    if(userInfo.is_send === "true"){
-        // 行程发布助手
-        rule = /^\s*(发布|发布行程|人找车|车找人|注册|绑定).*$/i
-        if (rule.test(data.msg)) {
-        const userInfo = yield service.bot.getUserInfo(data)
-        const groupInfo = yield service.bot.getGroupInfo(data)
-        let msg = ''
-        if (userInfo && userInfo.wx_openid) {
-            const gid = groupInfo && groupInfo.gid || ''
-            const url = yield service.url.pubPage(gid)
-            msg = '请点击链接填写行程发布信息：\n' + url
-        } else {
-            const url = yield service.url.bindPage(true)
-            msg = '未绑定平台账号，请先点击链接复制验证码，并发送给我进行绑定！\n链接： ' + url
-        }
-        this.socket.emit('rev_msg', {
-            alias: data.alias,
-            msg,
-        })
 
-            if (data.topic) {
-                this.socket.emit('rev_msg', {
-                alias: data.alias,
-                topic: data.topic,
-                msg: '已经通过私聊将填写链接发给您，请尽快查看填写！',
-                })
-            }
-        }
+    // 行程发布助手
+    rule = /^\s*(发布|发布行程|人找车|车找人|注册|绑定).*$/i
+    if (rule.test(data.msg)) {
+      const userInfo = yield service.bot.getUserInfo(data)
+      const groupInfo = yield service.bot.getGroupInfo(data)
+      let msg = ''
+      if (userInfo && userInfo.wx_openid) {
+        const gid = groupInfo && groupInfo.gid || ''
+        const url = yield service.url.pubPage(gid)
+        msg = '请点击链接填写行程发布信息：\n' + url
+      } else {
+        const url = yield service.url.bindPage(true)
+        msg = '未绑定平台账号，请先点击链接复制验证码，并发送给我进行绑定！\n链接： ' + url
+      }
+      this.socket.emit('rev_msg', {
+        alias: data.alias,
+        msg,
+      })
+
+      if (data.topic) {
+        this.socket.emit('rev_msg', {
+          alias: data.alias,
+          topic: data.topic,
+          msg: '已经通过私聊将填写链接发给您，请尽快查看填写！',
+        })
+      }
     }
-   
 
     // 加群助手
     const keyRule = /^\s*(\d{5,7})\s*$/i
