@@ -90,6 +90,8 @@ module.exports = app => {
       // // 【虚拟属性】冻结积分（待生效积分）
       // freeze: { type: Number, default: 0 },
     },
+    // 是否发送用户信息
+    is_send: { type: Boolean, default: true },
     // 住址
     address: { type: String, default: '' },
     // 上班时间

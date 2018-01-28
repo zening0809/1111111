@@ -266,8 +266,9 @@ export default {
         "company_address",
         "office_hours",
         "off_hours",
+        "is_send",
         "corp",
-        "intro"
+        "intro",             
       ];
       fields.forEach(i => {
         if (this.info[i] !== undefined) {

@@ -117,6 +117,10 @@ module.exports = app => {
         'car_no',
         'corp',
         'intro',
+        "company_address",
+        "office_hours",
+        "off_hours",
+        "is_send",
       ]
       fields.forEach(i => {
         if (data[i] !== undefined) {
@@ -126,9 +130,8 @@ module.exports = app => {
       if (d.phone || d.wx_id) {
         data.formal = true
       }
-
       // TODO:进一步过滤字段，比如addrs
-      const ret = await service.user.update(uid, d)
+      const ret = await service.user.update(uid, d);
       return !!ret
     }
 

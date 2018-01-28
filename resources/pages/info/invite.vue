@@ -59,7 +59,7 @@
     </div>
 
     <br>
-    <a @click="invite" class="weui-btn weui-btn_plain-primary">我要邀请</a>
+    <a @click="invite" class="weui-btn weui-btn_plain-primary">邀请好友</a>
   </div>
 </template>
 
@@ -230,7 +230,7 @@ export default {
       wx.ready(() => {
         const shareData = {
           title: "好友邀请你来借螃蟹",
-          desc: "借螃蟹为你提供出行便利",
+          desc: "‘借螃蟹’：和邻居一起拼车上下班",
           link: this.shareLink,
           //TODO: 图标url需要替换为云端url
           imgUrl: window.location.origin + "/site/logo.jpg"

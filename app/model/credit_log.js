@@ -22,6 +22,7 @@ module.exports = app => {
     user_ver: Number,
     // 信用总值
     add_total: Number,
+    is_send: { type: Number, default: 0},
     add_subtype: {
       // // 出行信用值
       // trip: Number,

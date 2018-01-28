@@ -14,21 +14,21 @@
           <label>总信用值：</label>
         </div>
         <div class="weui-cell__bd">
-          <p>{{info.credit_total || 0}} 分</p>
+          <p>{{info.credit_total || 0}}  </p>
         </div>
       </div>
       <!-- <div class="weui-cell">
       <label>个人出行信用值：</label>
       </div>
       <div class="weui-cell__bd">
-      <p>{{info.credit_trip}} 分</p>
+      <p>{{info.credit_trip}}  </p>
       </div> -->
       <div class="weui-cell">
         <div class="weui-cell__bd">
           <label>邀请所得信用值：</label>
         </div>
         <div class="weui-cell__bd">
-          <p>{{info.credit_subtype&&info.credit_subtype.invite || 0}} 分</p>
+          <p>{{info.credit_subtype&&info.credit_subtype.invite || 0}}  </p>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
           <label>总积分：</label>
         </div>
         <div class="weui-cell__bd">
-          <p>{{info.score&&info.score.total || 0}} 分</p>
+          <p>{{info.score&&info.score.total || 0}}  </p>
         </div>
       </div>
       <div class="weui-cell">
@@ -47,7 +47,7 @@
           <label>已生效积分：</label>
         </div>
         <div class="weui-cell__bd">
-          <p>{{info.score&&info.score.valid || 0}} 分</p>
+          <p>{{info.score&&info.score.valid || 0}}  </p>
         </div>
       </div>
       <div class="weui-cell">
@@ -55,7 +55,7 @@
           <label>未生效积分：</label>
         </div>
         <div class="weui-cell__bd">
-          <p>{{info.score&&info.score.freeze || 0}} 分</p>
+          <p>{{info.score&&info.score.freeze || 0}}  </p>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
       </div>
     </div>
     <div class="button-sp-area">
-      <a @click="invite" class="weui-btn weui-btn_plain-primary">我要邀请</a>
+      <a @click="invite" class="weui-btn weui-btn_plain-primary">邀请好友</a>
     </div>
     <br>
   </div>
@@ -179,7 +179,7 @@ export default {
       wx.ready(() => {
         const shareData = {
           title: "好友邀请你来借螃蟹",
-          desc: "借螃蟹为你提供出行便利",
+          desc: "借螃蟹’：和邻居一起拼车上下班",
           link: this.shareLink,
           //TODO: 图标url需要替换为云端url
           imgUrl: window.location.origin + "/site/logo.jpg"

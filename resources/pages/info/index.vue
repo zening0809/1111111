@@ -36,7 +36,7 @@
         <div class="weui-grid__label">我的行程</div>
       </nuxt-link>
       <nuxt-link class="weui-grid" to="/info/invite">
-        <div class="weui-grid__label">我的邀请</div>
+        <div class="weui-grid__label">邀请好友</div>
       </nuxt-link>
     </div>
     <div class="weui-grids">

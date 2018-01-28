@@ -34,7 +34,7 @@
           </div>
           <div class="weui-flex__item">
             <div class="placeholder">
-              <label class="weui-form-preview__label no-min-width">信用值：{{driver.credit}}分</label>
+              <label class="weui-form-preview__label no-min-width">信用：{{driver.credit}}</label>
             </div>
           </div>
         </div>
